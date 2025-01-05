@@ -1,0 +1,9 @@
+@mixin flexbox($valor-flex-direction:column,$valor-justify-content:center,$valor-justify-items:center,$valor-align-items:center) {
+  display: flex;
+  flex-direction: $valor-flex-direction;
+  justify-content: $valor-justify-content;
+  justify-items: $valor-justify-items;
+  align-items: $valor-align-items;
+
+}
+/*@mixin utilizado en estilo*/

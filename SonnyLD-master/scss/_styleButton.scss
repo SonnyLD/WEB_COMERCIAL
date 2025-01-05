@@ -1,0 +1,26 @@
+.btn-secondary {
+	display: flex;
+	width: 10%;
+	justify-content: center;
+}
+.btn {
+	justify-content: center;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: rgba(13, 13, 14, 0.747);
+	background-color:map-get($mapa-colores, naranja );
+	border: 4px solid rgb(223, 219, 219);
+	border-radius: 20px;
+	box-shadow: 5px 8px 12px rgb(15, 14, 14);
+	transition: all 0.3s ease-in-out;
+    &:hover {
+		transform: scale(1.1);
+		box-shadow: 13px 15px 37px black;
+	}
+}
+.ayuda {
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 13px 15px 37px black;
+	}
+}

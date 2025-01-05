@@ -1,0 +1,43 @@
+/*Header y navegacion*/
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: $text-center;
+	width: 100%;
+}
+.logo {
+	display: flex;
+	width: 10%;
+	width: 6.25em;
+	height: 6.25em;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.title__header {
+	text-align: $text-center;
+}
+.navbar {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+}
+.navegacion {
+	display: flex;
+	background-color: map-get($mapa-colores, naranja );
+	justify-content: center;
+	justify-items: end;
+.navegacion__estilo {
+	font-size: 1.25em;
+	text-decoration: none;
+	padding: 1.25rem;
+	color: black;
+	&:hover {
+		background-color: map-get($mapa-colores, blanco );
+		transition: background-color 0.5s;
+	}
+}
+}

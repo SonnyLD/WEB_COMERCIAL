@@ -1,0 +1,222 @@
+/* Fuente importada de fonts.google*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,700;1,800&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "variables";
+@import "mixins";
+@import "header_nav";
+@import "styleButton";
+@import "general";
+
+form {
+  background-image: linear-gradient(to top, #f1b125ec, #f1e3c3ec, #dfd4baec);
+  width: 100%;
+  justify-content: center;
+  text-align: $text-center;
+  padding: 3.75em;
+  margin: 3px;
+  border: 4px solid rgb(248, 245, 245);
+}
+.formulario {
+  @include flexbox(center);
+  margin-top: 6rem;
+
+  text-align: $text-center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.boton__enviar {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.boton__elegir {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.boton__provincia {
+  @extend .boton__elegir;
+}
+
+.boton__centro {
+  @extend .boton__elegir;
+}
+
+.texto1 {
+  text-align: $text-center;
+  font-weight: bold;
+}
+.texto2 {
+  text-align: $text-center;
+}
+.title {
+  text-align: $text-center;
+  padding: 200px;
+  background-image: url(../Imagenes/stock-photo-cropped-view-workman-electric-drill.jpg);
+  font-size: 5rem;
+  color: white;
+}
+.Num {
+  text-align: $text-center;
+  font-size: 5rem;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+  }
+}
+
+.card {
+  background-color: map-get($mapa-colores, naranja);
+  width: 70%;
+  left: 20%;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+  }
+}
+.imagen1{
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+  }
+}
+.imagen2{
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+  }
+}
+.imagen3{
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+  }
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción 16:9 para el video */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mapa {
+  @include flexbox(column, center);
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(19, 18, 18);
+  .container-mapas__img {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+}
+#historia {
+  @include flexbox(column);
+  text-align: $text-center;
+  background-color: map-get($mapa-colores, gris);
+  font-size: 1.6rem;
+  padding: 3rem;
+}
+.row {
+  margin-top: 2rem;
+}
+.comprar {
+  margin-top: 6rem;
+  border: 6px solid rgb(17, 17, 17);
+  margin: auto;
+}
+
+.icons-wrapper {
+  position: relative;
+  @include flexbox(center);
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block; /*Makes the icons inline block level elements. This will let us animate the transform property.*/
+  font-size: 44px;
+  animation: float 4s ease-in-out infinite; /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
+}
+/*
+    The following styles will add linear gradient background to the text then it will clip the text shape into the background.
+    The result is gradient text.
+  */
+.ri-instagram-line {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* This is the first item so no animation delay needed.*/
+}
+
+.ri-facebook-circle-line {
+  color: #1877f2;
+  animation-delay: 0.5s; /* Adds a animation delay of 1 seconds.*/
+}
+
+.ri-whatsapp-line {
+  color: #25d366;
+  animation-delay: 1s; /* Adds a animation delay of 2 seconds.*/
+}                                                                                                                                                                                                                                                       
+@keyframes float {
+  0% {
+    transform: translateY(0); /*The starting point of the animation is 0.*/
+  }
+  50% {
+    transform: translateY(
+      -25px
+    ); /*The middle point of the animation is -15xp. This will move the element up.*/
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /*The last point of the animation is going back to the starting state of 0.*/
+  }
+}
+/*el media query de todas las paginas. Hay que realizar algunas correcciones*/
+@media screen and (max-width: 412px) {
+  .header {
+    font-size: 10px;
+  }
+  .button__galeria {
+    font-size: 12px;
+  }
+
+  /*Se bloquea 2 items de la pagina principal cuando se reduce a 768px*/
+
+  .video {
+    display: none;
+  }
+  .ayuda {
+    display: none;
+  }
+  .descripcion {
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  #producto {
+    margin-top: 10em;
+  }
+
+  .mapas__img {
+    height: 20%;
+    border: 2px solid black;
+    
+  }
+
+  #historia {
+    font-size: 18px;
+  }
+}
